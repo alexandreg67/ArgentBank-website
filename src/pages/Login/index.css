@@ -1,3 +1,11 @@
+.main {
+  flex: 1;
+}
+
+.bg-dark {
+  background-color: #12002b;
+}
+
 .sign-in-button {
     display: block;
     width: 100%;
@@ -19,9 +27,9 @@
     padding: 2rem;
   }
   
-  .sign-in-icon {
+  /* .sign-in-icon {
     font-size: 5rem;
-  }
+  } */
   
   .input-remember {
     display: flex;

@@ -1,12 +1,43 @@
 import React from 'react';
 import './index.css';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect, useState } from 'react';
+import EditUserForm from '../../components/EditUserForm';
+import { fetchUserProfile } from '../../features/user/userSlice';
 
 export default function User() {
+
+    const user = useSelector((state) => state.user.user); 
+    const dispatch = useDispatch();
+    const [editing, setEditing] = useState(false);
+
+    useEffect(() => {
+        if (!user) {
+            dispatch(fetchUserProfile());
+        }
+    }, [user, dispatch]);
+
+    const handleCancel = () => {
+      setEditing(false);
+    };
+    
+    //   useEffect(() => {
+    //     console.log('User data:', user);
+    //   }, [user]);
+
+
   return (
-    <>
+    <main className="main bg-dark">
         <div className="header">
-            <h1>Welcome back<br />Tony Jarvis!</h1>
-            <button className="edit-button">Edit Name</button>
+        {!editing && (
+            <>
+            <h1>Welcome back<br />{user ? `${user.firstName} ${user.lastName}`  : ""}!</h1>
+            <button onClick={() => setEditing(true)} className="edit-button">Edit Name</button>
+            </>
+        )}
+        {editing && (
+            <EditUserForm user={user} onCancel={handleCancel} />
+        )}
         </div>
         <h2 className="sr-only">Accounts</h2>
         <section className="account">
@@ -41,5 +72,5 @@ export default function User() {
                 <button className="transaction-button">View transactions</button>
             </div>
         </section>
-    </>
+    </main>
 )};
