@@ -10,6 +10,7 @@ export default function User() {
     const user = useSelector((state) => state.user.user); 
     const dispatch = useDispatch();
     const [editing, setEditing] = useState(false);
+    const [lock, setLock] = useState(false);
 
     useEffect(() => {
         if (!user) {
