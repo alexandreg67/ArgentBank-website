@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import "./index.css";
-import { updateUserProfile } from "../../features/user/userSlice";
+import { updateUserProfile } from "../../features/user/thunks";
 
 const EditUserForm = ({ user, onCancel }) => {
 	const dispatch = useDispatch();
