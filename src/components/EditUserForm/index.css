@@ -24,4 +24,14 @@
 	color: #fff;
 }
 
+.confirmation-message {
+  color: green;
+  margin-top: 1rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.1rem;
+}
   
