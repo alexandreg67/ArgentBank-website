@@ -1,49 +1,13 @@
-.edit-user-form {
+.edit-content {
+  box-sizing: border-box;
   background-color: white;
-  padding: 2rem;
+  color: #2c3e50;
   width: 300px;
   margin: 0 auto;
   margin-top: 3rem;
-  text-align: left;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-  
-.edit-user-form h1 {
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
-}
-  
-.input-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-  
-.input-wrapper label {
-  color: #2c3e50;
-  width: 115px;
-  margin-right: 0.5rem;
-  text-align: left;
-}
-  
-.input-wrapper input {
-  width: 70%;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 2rem;
 }
 
-.input-wrapper input:disabled {
-	background-color: #e0e0e0;
-	color: #7d7d7d;
-}
-  
 .button-group {
 	display: flex;
 	justify-content: space-between;
